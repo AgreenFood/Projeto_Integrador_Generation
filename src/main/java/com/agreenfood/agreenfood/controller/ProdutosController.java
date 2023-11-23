@@ -63,7 +63,7 @@ public class ProdutosController {
     }
 
     @ResponseStatus (HttpStatus.NO_CONTENT)
-    @DeleteMapping( "/{id} " )
+    @DeleteMapping("/{id}")
     public void delete(@PathVariable Long id) {
         Optional<Produtos> produtos = produtosRepository.findById(id);
         if (produtos.isEmpty())
